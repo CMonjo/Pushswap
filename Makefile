@@ -11,11 +11,14 @@ CFLAGS	=	-Wall -Wextra -W -Werror -pedantic -I include/
 
 LIB	=	-L lib/my -lmy
 
-SRC	=	sources_a_la_racine.c
+SRC	=	bubble_sort_array.c	\
+		my_amazing_sorter.c	\
+		swap_elem.c		\
+		tests.c
 
 OBJ	=	$(SRC:.c=.o)
 
-NAME	=	nom_de_l_executable
+NAME	=	push_swap
 
 all: $(NAME)
 
