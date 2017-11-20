@@ -18,7 +18,7 @@ int my_getnbr(char const *str)
 		nbr = nbr * 10;
 		nbr = nbr + *str++ -48;
 		if (nbr > 2147483647) {
-			nbr = calc_neg % 2 == 1?nbr * -1 : nbr;
+			nbr = calc_neg % 2 == 1 ? nbr * -1 : nbr;
 			if (nbr == -2147483648)
 				return (-2147483648);
 			return (0);

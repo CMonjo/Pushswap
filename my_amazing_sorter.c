@@ -6,45 +6,44 @@
 */
 #include <stdio.h>
 #include "my.h"
-#include "pushswap.h"
 
-void my_rotate_right(int *array, int size)
+void my_rotate_right(int *list1, int size)
 {
-	int cpy = array[size - 1];
+	int cpy = list1[size - 1];
 
 	while (size > 0) {
-		array[size - 1] = array[size - 2];
+		list1[size - 1] = list1[size - 2];
 		size--;
 	}
-	array[0] = cpy;
+	list1[0] = cpy;
 }
 
-void my_rotate_left(int *array, int size)
+void my_rotate_left(int *list1, int size)
 {
 	int count = 0;
-	int cpy = array[0];
+	int cpy = list1[0];
 
 	while (count < size - 1) {
-		array[count] = array[count + 1];
+		list1[count] = list1[count + 1];
 		count++;
 	}
-	array[size - 1] = cpy;
+	list1[size - 1] = cpy;
 }
 
-void my_swap_push(int *array)
+void swap_elem(int *list1)
 {
-	int i = array[0];
+	int i = list1[0];
 
-	array[0] = array[1];
-	array[1] = i;
+	list1[0] = list1[1];
+	list1[1] = i;
 }
 
-int my_stop(int *array, int size)
+int my_stop(int *list1, int size)
 {
 	int i = 0;
 
 	while (i + 1 != size) {
-		if (array[i] < array[i + 1]) {
+		if (list1[i] < list1[i + 1]) {
 			i++;
 		}
 		else {
@@ -54,24 +53,25 @@ int my_stop(int *array, int size)
 	return (1);
 }
 
-void my_amazing_sorter(int *array, int size)
+void my_amazing_sorter(int *list1, int size)
 {
 	int stop = 0;
 
 	while (stop == 0) {
-		if (array[0] > array[1]) {
-			my_swap_push(array);
+		if (list1[0] > list1[1]) {
+			swap_elem(list1);
 			my_putstr("swap\n");
 		}
-		else if (array[0] < array[1] && array[0] < array[size - 1]) {
-			my_rotate_right(array, size);
+		else if (list1[0] < list1[1] && list1[0] < list1[size - 1]) {
+			my_rotate_right(list1, size);
 			my_putstr("rotate_right\n");
 		}
-		else if (array[0] < array[1] && array[0] > array[size - 1]) {
-			my_rotate_left(array, size);
+		else if (list1[0] < list1[1] && list1[0] > list1[size - 1]) {
+			my_rotate_left(list1, size);
 			my_putstr("rotate_left\n");
 		}
-		if (my_stop(array, size) == 1)
+		if (my_stop(list1, size) == 1)
 			stop = 1;
 	}
+	printf("\nresult : %d %d %d\n", list1[0], list1[1], list1[2]);
 }
