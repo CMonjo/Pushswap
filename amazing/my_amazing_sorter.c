@@ -16,10 +16,8 @@ int my_stop(int *list_a, int size)
 	while (i + 1 != size) {
 		if (list_a[i] < list_a[i + 1]) {
 			i++;
-		}
-		else {
+		} else
 			return (0);
-		}
 	}
 	return (1);
 }
