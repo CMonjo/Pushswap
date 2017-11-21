@@ -12,6 +12,7 @@ CFLAGS	=	-Wall -Wextra -W -Werror -pedantic -I include/
 LIB	=	-L lib/my -lmy
 
 SRC	=	main.c			\
+		operations.c		\
 		my_amazing_sorter.c
 
 OBJ	=	$(SRC:.c=.o)
