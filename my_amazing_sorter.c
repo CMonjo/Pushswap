@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** my_amazing_sorter
+** push_swap
 ** File description:
 ** .c
 */
@@ -59,15 +59,4 @@ void my_amazing_sorter(int *list, int size)
 		else
 			swap_elem(list);
 	}
-
 }
-
-// sa(list);
-// sb(list_b);
-// sc(list, list_b);
-// ra(list, size);
-// rb(list_b, size);
-// rr(list, list_b, size);
-// rra(list, size);
-// rrb(list_b, size);
-// rrr(list, list_b, size);
