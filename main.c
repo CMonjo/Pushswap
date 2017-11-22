@@ -12,23 +12,42 @@
 
 int main(int ac, char **av)
 {
-	int *list_a;
+	int *list;
 	int i = 1;
+	int size = ac - 1;
+	int stop = 0;
 
-	list_a = malloc(sizeof(char *) * ac);
-	if (list_a == NULL)
+	list = malloc(sizeof(char *) * ac);
+	if (list == NULL)
 		exit (84);
 	if (ac < 2) {
 		my_putstr("Error please enter a list\n");
 		exit (84);
-	}
-	else {
+	} else {
+		printf("\nLIST = ");
 		while (i != ac) {
-			list_a[i - 1] = my_getnbr(av[i]);
+			list[i - 1] = my_getnbr(av[i]);
+			printf("[%d] ", list[i - 1]);
 			i++;
 		}
-		list_a[i] = '\0';
-		bubble_sort(list_a, ac - 1);
 	}
+	printf("\n\nOPE = \n");
+	if (size == 2) {
+		if (list[0] > list[1]) {
+			swap_elem(list);
+		}
+	}
+	if (size <= 3)
+		stop = my_stop(list, size);
+	if (stop == 0)
+		my_amazing_sorter(list, size);
+
+	i = 0;
+	printf("\n");
+	while (i < size) {
+		printf("\nlist[%d] = %d", i, list[i]);
+		i++;
+	}
+	printf("\n");
 	return (0);
 }

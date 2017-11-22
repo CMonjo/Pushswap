@@ -12,7 +12,8 @@ CFLAGS	=	-Wall -Wextra -W -Werror -pedantic -I include/
 LIB	=	-L lib/my -lmy
 
 SRC	=	main.c			\
-		bubble_sort.c
+		my_amazing_sorter.c	\
+		operations.c
 
 OBJ	=	$(SRC:.c=.o)
 
