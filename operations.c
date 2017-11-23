@@ -11,15 +11,11 @@
 
 void swap_elem(int *list_a)
 {
-
 	int i = list_a[0];
 
 	list_a[0] = list_a[1];
 	list_a[1] = i;
 	printf("sa");
-	for (int i = 0; i < 9; i++)
-		printf("%d", list_a[i]);
-	my_putchar('\n');
 }
 
 void rotate_left(int *list_a, int size)
@@ -33,9 +29,6 @@ void rotate_left(int *list_a, int size)
 	}
 	list_a[size - 1] = cpy;
 	printf("ra");
-	for (int i = 0; i < 9; i++)
-		printf("%d", list_a[i]);
-	my_putchar('\n');
 }
 
 void rotate_right(int *list_a, int size)
@@ -48,7 +41,4 @@ void rotate_right(int *list_a, int size)
 	}
 	list_a[0] = cpy;
 	printf("rra");
-	for (int i = 0; i < 9; i++)
-		printf("%d", list_a[i]);
-	my_putchar('\n');d
 }
