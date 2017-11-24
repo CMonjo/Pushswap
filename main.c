@@ -59,8 +59,7 @@ int main(int ac, char **av)
 			i++;
 		}
 	}
-	//print_list(list, ac);
 	error_handling(list, ac - 1);
-	//print_res(list, ac - 1);
+	my_putchar('\n');
 	return (0);
 }

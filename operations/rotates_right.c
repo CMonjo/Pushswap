@@ -18,7 +18,7 @@ void rotate_right(int *list, int size)
 		size--;
 	}
 	list[0] = cpy;
-	printf("rra");
+	my_putstr("rra");
 }
 
 void rotate_right_b(int *list_b, int size)
@@ -30,12 +30,12 @@ void rotate_right_b(int *list_b, int size)
 		size--;
 	}
 	list_b[0] = cpy;
-	printf("rrb");
+	my_putstr("rrb");
 }
 
 void rotates_right(int *list, int *list_b, int size)
 {
 	rotate_right(list, size);
 	rotate_right_b(list_b, size);
-	printf("rrr");
+	my_putstr("rrr");
 }

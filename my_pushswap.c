@@ -41,7 +41,7 @@ int print_space(int key)
 	if (key == 0)
 		key = 1;
 	else
-		printf(" ");
+		my_putchar(' ');
 	return (key);
 }
 

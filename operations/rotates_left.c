@@ -19,7 +19,7 @@ void rotate_left(int *list, int size)
 		count++;
 	}
 	list[size - 1] = cpy;
-	printf("ra");
+	my_putstr("ra");
 }
 
 void rotate_left_b(int *list_b, int size)
@@ -32,12 +32,12 @@ void rotate_left_b(int *list_b, int size)
 		count++;
 	}
 	list_b[size - 1] = cpy;
-	printf("rb");
+	my_putstr("rb");
 }
 
 void rotates_left(int *list, int *list_b, int size)
 {
 	rotate_left(list, size);
 	rotate_left_b(list_b, size);
-	printf("rr");
+	my_putstr("rr");
 }

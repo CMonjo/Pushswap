@@ -15,7 +15,7 @@ void swap_elem(int *list)
 
 	list[0] = list[1];
 	list[1] = i;
-	printf("sa");
+	my_putstr("sa");
 }
 
 void swap_elem_b(int *list_b)
@@ -24,14 +24,14 @@ void swap_elem_b(int *list_b)
 
 	list_b[0] = list_b[1];
 	list_b[1] = i;
-	printf("sb");
+	my_putstr("sb");
 }
 
 void swap_elems(int *list, int *list_b)
 {
 	swap_elem(list);
 	swap_elem_b(list_b);
-	printf("sc");
+	my_putstr("sc");
 }
 
 void pb(int *list, int *list_b)
