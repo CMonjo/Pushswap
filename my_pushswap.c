@@ -10,12 +10,12 @@
 #include "my.h"
 #include "pushswap.h"
 
-int my_stop(int *list_a, int size)
+int my_stop(int *list, int size)
 {
 	int i = 0;
 
 	while (i + 1 != size) {
-		if (list_a[i] <= list_a[i + 1]) {
+		if (list[i] <= list[i + 1]) {
 			i++;
 		} else
 			return (0);
@@ -45,23 +45,20 @@ int print_space(int key)
 	return (key);
 }
 
-void my_amazing_sorter(int *list_a, int *list_b, int size)
+void my_pushswap(int *list, int size)
 {
 	int key = 0;
 
-	list_b[0] = 1;
-	while (my_stop(list_a, size) != 1) {
+	while (my_stop(list, size) != 1) {
 		key = print_space(key);
-
-		if ((first_is_bigger(list_a, size) == 1)) {
-			rotate_left(list_a, size);
-			size--;
+		if ((first_is_bigger(list, size) == 1) && list[1] > list[2]) {
+				rotate_left(list, size);
 		}
-		else if (list_a[0] <= list_a[1] && list_a[1] > list_a[2])
-			rotate_left(list_a, size);
-		else if (list_a[0] <= list_a[1] && list_a[1] <= list_a[2])
-			rotate_right(list_a, size);
+		else if (list[0] <= list[1] && list[1] > list[2])
+			rotate_left(list, size);
+		else if (list[0] <= list[1] && list[1] <= list[2])
+			rotate_right(list, size);
 		else
-			swap_elem(list_a);
+			swap_elem(list);
 	}
 }

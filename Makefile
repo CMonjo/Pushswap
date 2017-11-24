@@ -7,13 +7,15 @@
 
 CC	=	gcc
 
-CFLAGS	=	-Wall -Wextra -W -Werror -pedantic -I include/
+CFLAGS	=	-Wall -Wextra -W -Werror -I include/
 
 LIB	=	-L lib/my -lmy
 
-SRC	=	main.c			\
-		my_amazing_sorter.c	\
-		operations.c
+SRC	=	main.c				\
+		my_pushswap.c			\
+		operations/swaps.c		\
+		operations/rotates_right.c	\
+		operations/rotates_left.c
 
 OBJ	=	$(SRC:.c=.o)
 
