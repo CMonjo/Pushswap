@@ -41,7 +41,7 @@ int print_space(int key)
 	if (key == 0)
 		key = 1;
 	else
-		my_putchar(' ');
+		my_putstr(" ");
 	return (key);
 }
 
@@ -60,5 +60,6 @@ void my_pushswap(int *list, int size)
 			rotate_right(list, size);
 		else
 			swap_elem(list);
+		//algorithm_pushswap(list, size);
 	}
 }

@@ -60,6 +60,6 @@ int main(int ac, char **av)
 		}
 	}
 	error_handling(list, ac - 1);
-	my_putchar('\n');
+	my_putstr("\n");
 	return (0);
 }

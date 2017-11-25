@@ -33,13 +33,3 @@ void swap_elems(int *list, int *list_b)
 	swap_elem_b(list_b);
 	my_putstr("sc");
 }
-
-void pb(int *list, int *list_b)
-{
-	int i = 1;
-	int j = list[0];
-
-	list[0] = j;
-	list_b[0] = i;
-	printf("pb");
-}
