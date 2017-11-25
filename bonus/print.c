@@ -9,26 +9,28 @@
 #include <stdlib.h>
 #include "my.h"
 #include "pushswap.h"
+#include "printf.h"
 
 void print_list(int *list, int ac)
 {
 	int i = 1;
 
+	my_printf("Your list is composed of :\n\n");
 	while (i != ac) {
-		printf("[%d] ", list[i - 1]);
+		my_printf("[%d] ", list[i - 1]);
 		i++;
 	}
-	printf("\n\n\n");
+	my_printf("\n\n\nThe operations are :\n\n");
 }
 
 void print_res(int *list, int size)
 {
 	int i = 0;
 
-	printf("\n\nResult :");
+	my_printf("\n\n\nYour list is now sorted !\n\n");
 	while (i < size) {
-		printf("\nlist[%d] = %d", i, list[i]);
+		my_printf("[%d] ", list[i]);
 		i++;
 	}
-	printf("\n");
+	my_printf("\n");
 }

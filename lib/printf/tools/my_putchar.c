@@ -7,7 +7,8 @@
 
 #include <unistd.h>
 
-void my_putchar(char c)
+void my_putchar_print(char c, int *count)
 {
+	(*count)++;
 	write(1, &c, 1);
 }
